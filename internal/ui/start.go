@@ -6,6 +6,7 @@ import (
 )
 
 // Start launches the command line interface and starts capturing input
+// This is bubbletea entry point
 func Start(dep *c.Dependencies, ctx *c.Context) func() error {
 	return func() error {
 		p := tea.NewProgram(NewModel(*dep, *ctx))

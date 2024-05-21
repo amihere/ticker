@@ -116,11 +116,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) { //nolint:ireturn,cyclo
 			m.groupSelectedName = m.ctx.Groups[m.groupSelectedIndex].Name
 
 			return m, generateQuoteMsg(m, true)
-		case "ctrl+c":
-			fallthrough
-		case "esc":
-			fallthrough
-		case "q":
+		case "ctrl+c", "esc", "q":
 			return m, tea.Quit
 		}
 

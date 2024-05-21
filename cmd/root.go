@@ -27,7 +27,7 @@ var (
 		Use:     "ticker",
 		Short:   "Terminal stock ticker and stock gain/loss tracker",
 		Args:    cli.Validate(&ctx, &options, &err),
-		Run:     cli.Run(ui.Start(&dep, &ctx)),
+		Run:     cli.Run(ui.Start(&dep, &ctx)), // Commander wraps bubble tea init fn
 	}
 	printCmd = &cobra.Command{
 		Use:   "print",
